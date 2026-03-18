@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 100% 96%;
+    --foreground: 20 10% 15%;
+
+    --card: 40 60% 97%;
+    --card-foreground: 20 10% 15%;
+
+    --popover: 43 100% 96%;
+    --popover-foreground: 20 10% 15%;
+
+    --primary: 122 54% 24%;
+    --primary-foreground: 43 100% 96%;
+
+    --secondary: 43 100% 65%;
+    --secondary-foreground: 20 10% 15%;
+
+    --muted: 35 30% 90%;
+    --muted-foreground: 20 8% 45%;
+
+    --accent: 0 68% 47%;
+    --accent-foreground: 43 100% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 30% 82%;
+    --input: 35 30% 82%;
+    --ring: 122 54% 24%;
+
+    --radius: 0.75rem;
+
+    --kerala-green: 122 54% 24%;
+    --kerala-yellow: 43 96% 56%;
+    --kerala-red: 0 68% 47%;
+    --kerala-cream: 43 100% 96%;
+    --kerala-brown: 20 30% 25%;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 md:px-8 lg:px-16 xl:px-24;
+  }
+
+  .kerala-gradient {
+    background: linear-gradient(135deg, hsl(var(--kerala-green)), hsl(var(--kerala-green) / 0.8));
+  }
+
+  .text-gradient-kerala {
+    background: linear-gradient(135deg, hsl(var(--kerala-green)), hsl(var(--kerala-red)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
